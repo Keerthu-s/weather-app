@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="https://firebasestorage.googleapis.com/v0/b/app-sowmin.appspot.com/o/favicon.png?alt=media&token=5843778a-2c3c-4cbf-861b-c0b706015745"/>
+    <link rel="stylesheet" href="weather.css">
+    <!--<script src="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.js"></script>
+    Above link does not work for first try
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>-->
+    <!--<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.css" />-->
+    <title>Weather App</title>
+    </head>
+<body>
+    <div id="body">
+        <!--Nav Start-->
+        <div id="nav">
+            <table style="width:100%;">
+                <tr>
+                    <td id="td-logo">
+                        <div id="logo" title="SN-home">
+                            <a href="../index.html">
+                                <img id="logo-img" src="https://firebasestorage.googleapis.com/v0/b/app-sowmin.appspot.com/o/favicon.png?alt=media&token=5843778a-2c3c-4cbf-861b-c0b706015745" alt="SN logo">
+                            </a>
+                        </div>
+                    </td>
+                    <td id="td-header" align="center">
+                        <h1 class="light">Weather App</h1>
+                    </td>
+                    <td id="td-burg">
+                        <!--Note that the ondblclick is working differently for desktop and mobile devices-->
+                        <!--In Desktop, two click, that occur 'quickly' is considered dblclick-->
+                        <!--For Mobile the first click is always as a click-->
+                        <div id="burg" title="More" onclick="popupon()">
+                            <img id="burg-img" src="https://firebasestorage.googleapis.com/v0/b/app-sowmin.appspot.com/o/burg.png?alt=media&token=4c65b91c-6c1e-4761-a868-69daef00979a" alt="burg logo">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Pop Box Start-->
+        <div class="popup" id="popup-box" style="visibility: hidden;">
+            <a href="../index.html">
+                <h5 id="popup-h5" align="center" >Home</h6>
+            </a>
+            <a href="../src/friends.html">
+                <h5 id="popup-h5" align="center" >Friends</h6>
+            </a>
+            <a href="../src/blog-home.html">
+                <h5 id="popup-h5" align="center" >Blogs</h6>
+            </a>
+        </div>
+        <!--Popup Box End-->
+
+        <!--Nav End-->
+        <div class="container" align="center" style="visibility: visible;">
+			<p>Get Basic Weather details of your location.</p>
+			</br>
+			<button onclick="loadspinanimate()" class="button">Get Weather</button>
+        </div>
+		<div class="container" id="weather" align="center" style="visibility: hidden;">
+			<!-- javascript fills this section-->
+		</div>
+    <script src="weather.js" defer></script>
+</body>
+</html>
